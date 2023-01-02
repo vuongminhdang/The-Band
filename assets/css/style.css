@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.clear{
+    clear:both;
+}  
+#main {
+    
+}
+
+#header {
+    width: 100%;
+    height: 46.5px;
+    background-color: rgb(0, 0, 0);
+    position: fixed; 
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+ #nav, .subnav{ 
+    list-style: none;
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+    position:relative;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+    color: black;
+    background-color: #ccc;
+    display: inline-block;
+}
+#nav .subnav{
+    display: none;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(26, 24, 24,0.5);
+    min-width: 160px;
+}
+
+
+#nav li:hover .subnav {
+    display: inline-block;
+    color: black;
+    background-color: #ccc;
+}
+#nav > li > a{
+    display:inline-block;
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    padding: 0px 24px;
+    line-height: 46.5px;
+    font-size: 15px;
+    display: block;
+}
+
+#nav .subnav li a{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    line-height: 22.5px;
+    min-width: 160px;
+    /* position: static; */
+    float: left;
+}
+
+#nav .icon1{
+    font-size: 14px;
+    line-height: 46.5px;
+}
+#header .search-button{
+    float: right;
+    position: relative;
+    padding: 0px 22.75px;
+    background-color: rgb(0, 0, 0);
+}
+#header .menu-button{
+    display: none;
+    float: right;
+    position: relative;
+    padding: 0px 22.75px;
+    background-color: rgb(0, 0, 0);
+}
+#header .menu-icon,
+#header .search-icon {
+   color: rgb(255, 255, 255);
+   line-height: 46.5px;
+}
+
+#header .menu-button{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .search-button:hover{
+    background-color: red;
+    cursor:pointer;
+}
+#header .menu-button:hover{
+    background-color: #ccc;
+    color: #000 ;
+}
+#header .menu-icon:hover{
+    color: #000 ;
+}
+ #slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top:46.5px;
+    padding-top: 50%;;
+    background: url('img/slider1-chicago.jpg') top center / cover  no-repeat;
+}
+#slider .slider-content{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 100%; 
+    text-align: center;
+    bottom: 47px;
+} 
+#slider .text-heading{
+    margin: 10px 0px;
+    font-weight: 300;
+    font-size: 24px;
+}
+#slider .text-paragraph{
+    margin: 15px 0px;
+    font-weight:bolder;
+    font-size: 15px;
+}
+#contents {
+   
+}
+
+/*-----------------Start: CONTENT-SECTION----------------------*/
+#contents .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px 64px;
+}
+#contents .heading{
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+#contents .sub-heading{
+    text-align: center;
+    margin: 15px 0px;
+    font-style: italic;
+    /* color: rgb(141, 137, 137); */
+    opacity: 0.6;
+}
+#contents .paragraph{
+    text-align: justify;
+    margin: 15px 0px;
+}
+#contents .member{
+    /*overflow: hidden;*/
+    padding: 32px 0px 32px;
+}
+#contents .member-title{
+    padding: 15px 0px;
+}
+#contents .member-image{
+    float: left;
+    width: calc(100%/3);
+    text-align: center;
+}
+#contents .member-image img{
+    width: 153px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+.white{
+    color: #fff !important;
+}
+#contents .tour{
+    background-color: black;
+}
+#contents .ticket{
+    background-color: #fff;
+    border: #ccc 2px;
+    list-style: none;
+}
+#contents .ticket .month{
+    padding: 8px 16px;
+    border-bottom: solid #ddd 1px;
+    opacity: 0.8;
+}
+#contents .ticket .sold-out{
+    display: inline-block;
+    padding: 0px 8px;
+    margin: 0 0 0 16px;
+    background: red;
+}
+#contents .ticket .number{
+    float: right;
+    display: inline-block;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 0 8px 0;
+    margin-right: 16px;
+}
+/*-----------------End: CONTENT-SECTION----------------------*/
+
+/*-----------------Start: TOUR----------------------*/
+#contents .place-list{
+   padding: 32px 0px;
+   margin: 0px -8px 0px -8px;
+   overflow: hidden;
+}
+#contents .place-item{
+    width: 33.33333%;
+    float: left;
+    padding: 0px 8px;
+    
+ }
+ #contents .place-item img{
+    width: 100%;
+    display: block;
+ }
+ #contents .place-item img:hover{
+    opacity: 0.6;
+ }
+ #contents .place-item .place-body{
+    background-color: #fff;
+    padding: 16px 16px;
+ }
+ #contents .place-item .place-heading{
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 15px 0px;
+ }
+ #contents .place-item .place-time{
+    margin: 15px 0px;
+    opacity: 0.6;
+ }
+ #contents .place-item .place-detail{
+    margin: 15px 0px;
+ }
+ #contents .place-item .place-button{
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    padding: 10px 16px;
+    text-decoration: none;
+ }
+ #contents .place-item .place-button:hover{
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+    border: #ccc solid 2px;
+ }
+/*-----------------End: TOUR----------------------*/
+
+
+/*-----------------Start: CONTACT-----------------*/
+.contact{
+    padding: 32px 0;
+    font-size: 18px;
+    overflow: hidden;
+}
+.contact i{
+    padding-right: 12px;
+    font-weight:bold;
+}
+.contact input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    display: block;
+}
+.contact-detail{
+    width: 50%;
+    float:left
+}
+.contact-detail i{
+    width: 30px;
+    padding-top: 3px;
+    float:left
+}
+
+.contact-input{
+    width: 50%;
+    float:left
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+    overflow: hidden;
+}
+.mg8{
+    margin-bottom: 8px;
+}
+.col{
+    float: left;
+    padding: 0 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.col .col-full input{
+    width: 100%;
+}
+.col.col-half button{
+    width: 72px;
+    padding: 8px;
+    margin: 16px 0;
+    float: right;
+    background-color: #000;
+    color: #fff;
+}
+.col.col-half button:hover{
+    background-color: #ccc;
+    width: 72px;
+    height: 35px;
+    padding: 8px;
+    margin: 16px 0;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+/*-----------------End: CONTACT-----------------*/
+.map img{
+    width: 100%;
+}
+
+
+
+#footer {
+    text-align: center;
+    padding: 64px 16px;
+}
+#footer .footer-icons{
+    font-size: 23px;
+    opacity: 0.6;
+}
+#footer .footer-icons i:hover{
+    opacity: 0.5;
+}
+#footer .footer-p{
+    opacity: 0.6;
+    margin: 15px 0;
+}
+
+
+.modal{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    position: relative;
+    /* width: 900px; */
+    width: 70%;
+    background-color: #fff;
+    animation: modalMove ease 1s;
+}
+.modal-closed{
+    position: absolute;
+    right: 0;
+    color: #fff;
+    padding: 8px 16px;
+    opacity: 0.8;
+}
+.modal-closed:hover{
+    opacity: 1;
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.modal-header{
+    text-align: center;
+    background-color: #009688;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 4px;
+    padding: 42px 16px;
+}
+
+.modal-body{
+    background-color: #fff;
+    padding: 0.15px 16px;
+}
+
+.modal-label{
+    display:block;
+    margin: 15px 0px;
+}
+
+.modal-input{
+    width: 100%;
+    padding: 8px;
+}
+
+#modal-button{
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    padding: 16px;
+    margin: 16px 0;
+    border: none;
+    font-weight: bolder;
+}
+#modal-button:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.modal-footer{
+    float: right;
+    margin: 15px;
+    background-color: rgb(255, 255, 255);
+}
+.modal-help{
+    color: rgb(44, 183, 248);
+}
+@keyframes modalMove{
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
